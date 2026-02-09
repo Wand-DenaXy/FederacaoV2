@@ -20,3 +20,5 @@ Route::get('/', function () {
 });
 
 Route::post('/registar', [UtilizadorController::class, 'registar']);
+Route::post('/logout', [UtilizadorController::class, 'logout']);
+Route::post('/login', [UtilizadorController::class, 'login']);

@@ -19,61 +19,71 @@
 </head>
 
 <body>
-    <div class="container mt-5">
-        <div class="card">
-            <h5 class="card-header">Utilizador</h5>
-            <div class="card-body">
-                <h5 class="card-title">Registar</h5>
-                <form class="row g-3" action="/registar" method="POST">
-                    @csrf
-                    <div class="col-md-6">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" name="user" class="form-control" id="username">
-                    </div>
-                    <div class="col-md-3">
-                        <label for="password" class="form-label">Password</label>
-                       <input type="password" name="pw" class="form-control" id="password">
-                    </div>
+@auth
+<div class="container mt-5">
+    <h2>Nome de Utilizador</h2>
+    <h3>{{ Auth::user()->user }}</h3>
+</div>
+<div class="container mt-5">
+    <form action="/logout" method="POST">
+        @csrf
+        <button type="submit" class="btn btn-info">Logout</button>
+    </form>
+</div>
 
-                    <div class="col-md-3">
-                        <label for="tpUser" class="form-label">Tipo Utilizador</label>
-                        <select class="form-control" id="idtpUser" name="idtpUser">
-                            <option value="1">Administrador</option>
-                            <option value="2">Jogador</option>
-                            <option value="3">Gestor</option>
-                        </select>
-                    </div>
-
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Registar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-
-        <div class="container mt-5">
-            <div class="card">
-                <h5 class="card-header">Login</h5>
-                <div class="card-body">
-                    <form class="row g-3">
-                        <div class="col-md-6">
-                            <label for="usernameLogin" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="usernameLogin">
-                        </div>
-                        <div class="col-md-3">
-                            <label for="passwordLogin" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="passwordLogin">
-                        </div>
-
-                        <div class="col-12">
-                            <button type="button" class="btn btn-primary" onclick="login()">Login</button>
-                        </div>
-                    </form>
+@else
+<div class="container mt-5">
+    <div class="card">
+        <h5 class="card-header">Utilizador</h5>
+        <div class="card-body">
+            <h5 class="card-title">Registar</h5>
+            <form class="row g-3" action="/registar" method="POST">
+                @csrf
+                <div class="col-md-6">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" name="user" class="form-control" id="username" required>
                 </div>
-            </div>
+                <div class="col-md-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="idtpUser" class="form-label">Tipo Utilizador</label>
+                    <select class="form-control" id="idtpUser" name="idtpUser">
+                        <option value="1">Administrador</option>
+                        <option value="2">Jogador</option>
+                        <option value="3">Gestor</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Registar</button>
+                </div>
+            </form>
         </div>
+    </div>
+</div>
 
+<div class="container mt-5">
+    <div class="card">
+        <h5 class="card-header">Login</h5>
+        <div class="card-body">
+            <form class="row g-3" action="/login" method="POST">
+                @csrf
+                <div class="col-md-6">
+                    <label for="usernameLogin" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="usernameLogin" name="usernameLogin" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="passwordLogin" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="passwordLogin" name="passwordLogin" required>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endauth
 </body>
-
 </html>
