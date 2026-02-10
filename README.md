@@ -4,7 +4,7 @@
 
 O projeto **Federação V2** consiste numa aplicação web desenvolvida em **Laravel (PHP)**, destinada à gestão de **clubes e utilizadores**, permitindo o registo, edição, listagem e remoção de dados através de uma interface web moderna.
 
-Esta versão representa uma evolução do projeto [Federação V1][(https://github.com/Wand-DenaXy/Federacao))], substituindo a implementação em PHP puro por um framework profissional, permitindo melhor organização do código, maior segurança e maior rapidez no desenvolvimento.
+Esta versão representa uma evolução do projeto [Federação V1](https://github.com/Wand-DenaXy/Federacao), substituindo a implementação em PHP puro por um framework profissional, permitindo melhor organização do código, maior segurança e maior rapidez no desenvolvimento.
 
 A aplicação segue o padrão **MVC (Model–View–Controller)** implementado pelo Laravel, garantindo separação entre lógica de negócio, apresentação e acesso a dados.
 
