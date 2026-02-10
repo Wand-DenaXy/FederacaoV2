@@ -1,5 +1,5 @@
 # Federação V2 – Relatório do Projeto
-##Descrição
+## Descrição
 
 O projeto **Federação V2** consiste numa aplicação web desenvolvida em **Laravel (PHP)**, destinada à gestão de clubes e utilizadores, permitindo o registo, edição, listagem e remoção de dados através de uma interface web moderna.
 
