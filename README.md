@@ -4,7 +4,7 @@
 
 O projeto **Federação V2** consiste numa aplicação web desenvolvida em **Laravel (PHP)**, destinada à gestão de **clubes e utilizadores**, permitindo o registo, edição, listagem e remoção de dados através de uma interface web moderna.
 
-Esta versão representa uma evolução do projeto [Federação V1](https://github.com/Wand-DenaXy/Federacao), substituindo a implementação em PHP puro por um framework profissional, permitindo melhor organização do código, maior segurança e maior rapidez no desenvolvimento.
+Esta versão representa uma evolução do projeto [Federação](https://github.com/Wand-DenaXy/Federacao), substituindo a implementação em PHP puro por um framework profissional, permitindo melhor organização do código, maior segurança e maior rapidez no desenvolvimento.
 
 A aplicação segue o padrão **MVC (Model–View–Controller)** implementado pelo Laravel, garantindo separação entre lógica de negócio, apresentação e acesso a dados.
 
@@ -12,7 +12,7 @@ A aplicação segue o padrão **MVC (Model–View–Controller)** implementado p
 |--------|-----------|
 | `criarClube()` | Cria um novo clube. |
 | `editarClube/{clube}()` | Edita dados de um clube.|
-| `eliminarClube/{clube}` | Remove o Clube selecionado. |
+| `eliminarClube/{clube}()` | Remove o Clube selecionado. |
 
 
 
@@ -33,7 +33,6 @@ A aplicação segue o padrão **MVC (Model–View–Controller)** implementado p
 **Linguagem:** PHP
 **Arquitetura:** MVC (Model–View–Controller)
 **Base de Dados:** MySQL
-**ORM:** Eloquent
 
 **Frontend:**
 HTML, CSS, JavaScript
@@ -66,7 +65,7 @@ Bootstrap jQuery DataTables
               ▼
 ┌──────────────────────────┐
 │          Models          │  ← Lógica de negócio e BD
-│ (Eloquent / MySQL)       │
+│         (MySQL)          │
 └──────────────────────────┘
 ```
 
